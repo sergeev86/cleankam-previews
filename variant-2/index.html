@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CleanKam34 — химчистка диванов, матрасов и ковров. Примеры работ и предварительная оценка.">
+  <title>CleanKam34 — химчистка мебели</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="shell topbar">
+    <a class="brand" href="#top">CleanKam<span>34</span></a>
+    <nav aria-label="Основное меню">
+      <a href="#services">Услуги</a><a href="#estimate">Расчёт</a><a href="#results">Работы</a><a href="#faq">Вопросы</a>
+    </nav>
+    <a class="pill header-action" href="#request">Оценка по фото <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="top">
+    <section class="shell hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Химчистка мягкой мебели</p>
+        <h1 id="hero-title">Чистая мебель.<br><em>Снова уютно.</em></h1>
+        <p>Чистим диваны, матрасы и ковры. По фото подскажем, что можно сделать с обивкой и сколько будет стоить работа.</p>
+        <div class="actions"><a class="pill primary" href="#estimate">Рассчитать стоимость <span aria-hidden="true">↗</span></a><a href="#results">Посмотреть результат</a></div>
+      </div>
+      <figure class="hero-photo">
+        <img src="images/sofa-cleaning-master.jpg" alt="Мастер CleanKam34 чистит светлый диван экстрактором" width="899" height="1200" fetchpriority="high">
+        <figcaption>Химчистка дивана на выезде</figcaption>
+      </figure>
+    </section>
+
+    <section class="shell section" id="services">
+      <div class="section-heading"><h2>Что чистим</h2><p>Цены в макете приведены для примера.</p></div>
+      <div class="services">
+        <article><img src="images/sofa-cleaning-master.jpg" alt="Чистка дивана" loading="lazy"><div><h3>Диваны</h3><a href="#estimate" data-service="sofa">от 2 500 ₽ <span aria-hidden="true">↗</span></a></div></article>
+        <article><img src="images/mattress-drying.jpg" alt="Матрас и оборудование для сушки" loading="lazy"><div><h3>Матрасы</h3><a href="#estimate" data-service="mattress">от 1 500 ₽ <span aria-hidden="true">↗</span></a></div></article>
+        <article><img src="images/carpet-cleaning.jpg" alt="Насадка для чистки коврового покрытия" loading="lazy"><div><h3>Ковры</h3><a href="#estimate" data-service="carpet">от 450 ₽ за м² <span aria-hidden="true">↗</span></a></div></article>
+        <article><img src="images/chairs-and-equipment.jpg" alt="Мягкие стулья и оборудование для химчистки" loading="lazy"><div><h3>Стулья</h3><a href="#estimate" data-service="chair">от 500 ₽ <span aria-hidden="true">↗</span></a></div></article>
+      </div>
+    </section>
+
+    <section class="shell section" id="estimate">
+      <div class="estimate-panel">
+        <div><p class="eyebrow">Предварительная оценка</p><h2>Сколько стоит<br>химчистка?</h2><p>Выбери мебель, укажи количество и степень загрязнения. Точную стоимость можно определить по фото.</p></div>
+        <form id="calculator" class="calculator">
+          <div class="calc-fields">
+            <label>Что чистим<select id="service"><option value="sofa">Диван</option><option value="mattress">Матрас</option><option value="carpet">Ковёр</option><option value="chair">Стул</option></select></label>
+            <label><span id="quantity-label">Количество, шт.</span><input id="quantity" type="number" min="1" max="999" step="1" value="1" required></label>
+          </div>
+          <label class="range-label" for="dirt">Загрязнение <output id="dirt-label" for="dirt">Лёгкое</output></label>
+          <input id="dirt" type="range" min="0" max="2" step="1" value="0" aria-valuetext="Лёгкое">
+          <div class="range-scale" aria-hidden="true"><span>Лёгкое</span><span>Среднее</span><span>Сильное</span></div>
+          <div class="calc-total"><div><span>Примерная стоимость</span><output id="price" for="service quantity dirt" aria-live="polite">2 500 ₽</output></div><a class="pill primary" href="#request">Уточнить по фото <span aria-hidden="true">↗</span></a></div>
+          <p class="note">Демонстрационный расчёт. Тарифы и коэффициенты условные.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="shell section results" id="results">
+      <div><p class="eyebrow">Наши работы</p><h2>Один диван.<br>Два кадра.</h2><p>На первом фото видны пятна на сиденье. Передвинь ползунок, чтобы сравнить обивку до и после чистки.</p></div>
+      <div>
+        <figure class="comparison" id="comparison">
+          <img src="images/client-sofa-after.jpg" alt="Серый диван после химчистки" loading="lazy" width="750" height="1000">
+          <img class="before" src="images/client-sofa-before.jpg" alt="Тот же диван с пятнами до химчистки" loading="lazy" width="750" height="1000">
+          <span class="before-label">До</span><span class="after-label">После</span>
+          <span class="divider" aria-hidden="true"><span>‹ ›</span></span>
+          <input id="compare-range" type="range" min="0" max="100" value="50" aria-label="Доля фото до чистки" aria-valuetext="50 процентов">
+        </figure>
+      </div>
+    </section>
+
+    <section class="shell section process" id="process">
+      <img src="images/extractor-equipment.jpg" alt="Экстрактор с насадкой и оборудование для сушки" loading="lazy" width="900" height="1200">
+      <div><h2>Как проходит чистка</h2><ol>
+        <li><h3>Осматриваем обивку</h3><p>Учитываем материал и характер загрязнений.</p></li>
+        <li><h3>Обрабатываем пятна</h3><p>Подбираем состав под ткань и обрабатываем загрязнённые участки.</p></li>
+        <li><h3>Чистим экстрактором</h3><p>Подаём раствор на ткань и собираем его вместе с загрязнениями.</p></li>
+      </ol></div>
+    </section>
+
+    <section class="shell section faq" id="faq">
+      <h2>Частые вопросы</h2>
+      <div>
+        <details><summary>Какие фото нужны для оценки?</summary><p>Сделай общий снимок мебели и сфотографируй заметные пятна крупным планом при хорошем свете.</p></details>
+        <details><summary>Сколько сохнет мебель?</summary><p>Время зависит от ткани, влажности и проветривания. После чистки мастер подскажет, когда мебелью можно пользоваться.</p></details>
+        <details><summary>Можно ли убрать любое пятно?</summary><p>Результат зависит от ткани, состава пятна, его давности и предыдущих попыток чистки.</p></details>
+        <details><summary>Чем чистите мебель?</summary><p>Для влажной чистки используем экстрактор. Средство подбираем после осмотра обивки.</p></details>
+      </div>
+    </section>
+
+    <section class="shell request" id="request">
+      <div><p class="eyebrow">Оценка по фото</p><h2>Покажи, что нужно почистить</h2><p>Приложи общий снимок и крупный план пятна.</p></div>
+      <form id="request-form">
+        <label>Телефон<input type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required></label>
+        <label>Фото мебели<input type="file" accept="image/*" multiple></label>
+        <button class="pill primary" type="submit">Проверить заявку <span aria-hidden="true">↗</span></button>
+        <p class="note">Демоформа. Отправка отключена.</p>
+        <p id="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="shell footer"><a class="brand" href="#top">CleanKam<span>34</span></a><span>Химчистка мягкой мебели</span></footer>
+</body>
+</html>
